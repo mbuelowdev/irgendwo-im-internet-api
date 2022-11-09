@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  IrgendwoImInternetApi:
+    container_name: IrgendwoImInternetApi
+    image: nginx-fpm-php8.1-composer2.4.3
+    volumes:
+      - ./:/var/www/html/site
+    ports:
+      - "80:80"
+    expose:
+      - "80"
